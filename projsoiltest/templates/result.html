@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'sty2.css'%}">
+    <title>Result</title>
+</head>
+<body>
+    <main>
+        <h1>----Best crop----</h1>
+        <h1 class="text">Based on the provided inputs, the recommended crop is:</h1>
+        <img src={{img}} alt="plant image" srcset="">
+        <h1 class="text" style="color:rgb(255, 80, 88);">{{rec}}</h1>
+        <h3 class="text">N = {{n}} mg/kg</h3>
+        <h3 class="text">P = {{p}} mg/kg</h3>
+        <h3 class="text">K = {{k}} mg/kg</h3>
+        <h3 class="text">Temperature = {{tem}} C</h3>
+        <h3 class="text">Humidity = {{hum}} %</h3>
+        <h3 class="text">Rainfall = {{rain}} cc</h3>
+        <h3 class="text">pH = {{ph}} </h3>
+        <a href="/">Back to home page</a>
+
+    </main>
+</body>
+</html>

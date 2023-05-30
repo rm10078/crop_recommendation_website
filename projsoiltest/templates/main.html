@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'sty.css'%}">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="main_dev">
+        <h1 class="title">🌾 Crop recommendation</h1>
+        <form class="main_form" action="/" method="post">
+            <h3 class="text">Nitrogen(N) in mg/kg</h3>
+            <input class="inele" type="text" name="n" id="user_id" placeholder="0-255">
+            <h3 class="text">Phosphorus (P) in mg/kg</h3>
+            <input class="inele" type="text" name="p" id="user_id" placeholder="0-255">
+            <h3 class="text">Potassim (K) in mg/kg</h3>
+            <input class="inele" type="text" name="k" placeholder="0-255">
+            <h3 class="text">Temperature in C</h3>
+            <input class="inele" type="text" name="tem" id="user_id" placeholder="-5-55">
+            <h3 class="text">Humidity in %</h3>
+            <input class="inele" type="text" name="hum" id="user_id" placeholder="0-100">
+            <h3 class="text">Ph</h3>
+            <input class="inele" type="text" name="ph" id="user_id" placeholder="5-9">
+            <h3 class="text">Rainfall </h3>
+            <input class="inele" type="text" name="rain" id="user_id" placeholder="0-300">
+            
+            {% csrf_token %}
+            <button type="submit" id="sub_but">Submit</button>
+        </form>
+        <h3 class="text">{{text}}</h3>
+        <a class="f_password" href="#">About us</a>
+        <a class="f_password" href="/newuser/">Help</a>
+
+    </div>
+    
+</body>
+<script src="{%static 'main.js'%}"></script>
+</html>
